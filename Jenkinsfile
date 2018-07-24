@@ -10,8 +10,12 @@ pipeline {
             steps {
                 echo 'Hello world from Jenkinsfile!'
                 sh "make"
-                 
             }
         }
-    }
+        stage('Run'){
+            steps{
+             sh './Hello'   
+            }
+         }
+     }
 }
